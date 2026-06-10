@@ -1,0 +1,395 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.topBanner {
+  background-color: #eff6ff;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  color: #1e40af;
+  border-bottom: 1px solid #bfdbfe;
+  margin: -24px -24px 24px -24px;
+  font-weight: 500;
+}
+
+.upgradeLink {
+  color: #2563eb;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 6px;
+}
+
+.upgradeLink:hover {
+  text-decoration: underline;
+  color: #1d4ed8;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.pageTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.viewToggle {
+  display: flex;
+  background-color: var(--bg-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.toggleBtn {
+  padding: 8px 12px;
+  color: var(--text-gray);
+  border-right: 1px solid var(--border-color);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.toggleBtn:last-child {
+  border-right: none;
+}
+
+.toggleBtn.active {
+  background-color: var(--bg-gray);
+  color: var(--text-dark);
+}
+
+.toggleBtn:hover:not(.active) {
+  background-color: #fafafa;
+}
+
+.filterRow {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.searchWrapper {
+  position: relative;
+  width: 300px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-gray);
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 10px 10px 36px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+  border-color: var(--primary-red);
+}
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  min-width: 120px;
+  justify-content: center;
+}
+
+.filterBtn:hover, .filterBtn:focus {
+  border-color: var(--text-gray);
+  background-color: #fafafa;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 160px;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.dropdownItem:hover {
+  background-color: var(--bg-gray);
+}
+
+.dropdownActive {
+  background-color: var(--primary-red-light);
+  color: var(--primary-red);
+  font-weight: 500;
+}
+
+.mainLayout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  flex: 1;
+  transition: grid-template-columns 0.3s;
+}
+
+.mainLayout.fullWidth {
+  grid-template-columns: 1fr;
+}
+
+/* Grid Mode */
+.botGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+  align-content: flex-start;
+}
+
+/* List Mode */
+.botList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.botCard {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.botCard:hover {
+  border-color: var(--primary-red-light);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.botCardList {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.botCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.botCardList .botCardHeader {
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.botProfile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.botAvatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.botName {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 15px;
+}
+
+.botBadge {
+  background-color: #f0fdf4;
+  color: #22c55e;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badgePaused {
+  background-color: #f3f4f6;
+  color: var(--text-gray);
+}
+
+.botCardFooter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.botCardList .botCardFooter {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.botDateLabel {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.botDateValue {
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+.emptyState {
+  padding: 40px;
+  text-align: center;
+  color: var(--text-gray);
+  font-size: 15px;
+  background: var(--bg-white);
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
+  grid-column: 1 / -1;
+}
+
+/* Guide Section */
+.guideSection {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: fit-content;
+}
+
+.guideHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guideTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.closeBtn {
+  color: var(--text-light);
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.closeBtn:hover {
+  background-color: var(--bg-gray);
+  color: var(--primary-red);
+}
+
+.videoThumbWrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+  aspect-ratio: 16/9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoThumbText {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 16px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.playIcon {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: white;
+}
+
+.guideText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.guideSubTitle {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.guideDesc {
+  font-size: 13px;
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+  .mainLayout {
+    grid-template-columns: 1fr;
+  }
+}

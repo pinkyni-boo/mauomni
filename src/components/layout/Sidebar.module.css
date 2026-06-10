@@ -1,0 +1,239 @@
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--bg-white);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.floatToggleBtn {
+  position: absolute;
+  top: 24px;
+  right: -14px;
+  width: 28px;
+  height: 28px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-gray);
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s;
+}
+
+.floatToggleBtn:hover {
+  color: var(--text-dark);
+  border-color: var(--text-gray);
+  transform: scale(1.05);
+}
+
+.header {
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border-color);
+  gap: 12px;
+  min-width: max-content;
+  overflow: hidden;
+}
+
+.sidebar.collapsed .header {
+  justify-content: center;
+  padding: 0 8px;
+  gap: 6px;
+}
+
+.sidebar.collapsed .logo {
+  width: 28px;
+  height: 28px;
+}
+
+.sidebar.collapsed .topCollapseBtn {
+  margin-left: 0;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.brandName {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.nav {
+  flex: 1;
+  padding: 20px 12px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar.collapsed .nav {
+  padding: 20px 8px;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.navItem {
+  margin: 0;
+  position: relative;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.sidebar.collapsed .navLink {
+  justify-content: center;
+  padding: 10px;
+}
+
+.navLink:hover {
+  background-color: var(--bg-gray);
+}
+
+.navLink.active {
+  background-color: var(--primary-red-light);
+  color: var(--primary-red);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.navLink.active .icon {
+  color: var(--primary-red);
+}
+
+.chevronBtn {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.chevronBtn:hover {
+  background-color: var(--border-color);
+  color: var(--text-dark);
+}
+
+.chevron {
+  transition: transform 0.2s;
+}
+
+.chevron.expanded {
+  transform: rotate(-180deg);
+}
+
+.subList {
+  list-style: none;
+  padding-left: 42px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.subItem {
+  margin: 0;
+}
+
+.subLink {
+  display: block;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--text-gray);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.subLink:hover {
+  color: var(--text-dark);
+  background-color: var(--bg-gray);
+}
+
+.footer {
+  padding: 12px;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+}
+
+.popupMenu {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 240px;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  padding: 8px;
+  list-style: none;
+  margin: 0 0 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 1000;
+}
+
+.sidebar.collapsed .popupMenu {
+  left: 100%;
+  bottom: -10px;
+  width: 220px;
+  margin: 0 0 0 10px;
+}
+
+.sidebar.collapsed .footer {
+  padding: 12px 8px;
+}
+
+.collapseBtn {
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: var(--text-gray);
+}
+
+.collapseBtn:hover {
+  color: var(--text-dark);
+}

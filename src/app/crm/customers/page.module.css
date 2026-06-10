@@ -1,0 +1,425 @@
+.container {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  background-color: var(--bg-white);
+  margin: -24px;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-gray);
+  border-left: 1px solid var(--border-color);
+  padding-left: 12px;
+}
+
+.headerRightBtn {
+  background-color: var(--bg-white);
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerRightBtn:hover {
+  background-color: rgba(220, 38, 38, 0.05);
+}
+
+/* Action Bar */
+.actionBar {
+  padding: 0 24px 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.primaryBtn:hover {
+  opacity: 0.9;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0 12px;
+  width: 280px;
+  background: var(--bg-white);
+}
+
+.searchInput {
+  border: none;
+  background: transparent;
+  padding: 8px;
+  width: 100%;
+  outline: none;
+  font-size: 13px;
+  color: var(--text-dark);
+}
+
+.toolBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.toolBtn:hover {
+  background-color: var(--bg-gray);
+}
+
+.toolBtnRed {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+.badge {
+  background-color: var(--primary-red);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* Table Area */
+.tableContainer {
+  flex: 1;
+  overflow: auto;
+  background-color: #f9fafb;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 1200px;
+}
+
+.dataTable th {
+  background-color: #f3f4f6;
+  padding: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-gray);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.dataTable td {
+  padding: 16px;
+  font-size: 14px;
+  color: var(--text-dark);
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+}
+
+.dataTable tr:hover td {
+  background-color: #f9fafb;
+}
+
+.checkboxCell {
+  width: 48px;
+  text-align: center;
+}
+
+/* Tags & Status */
+.tagContainer {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background-color: var(--bg-gray);
+  color: var(--text-dark);
+}
+
+.tagVip {
+  background-color: #fef08a;
+  color: #854d0e;
+}
+
+.tagLoyal {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.statusActive {
+  color: #16a34a;
+  background: #dcfce7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.statusInactive {
+  color: #dc2626;
+  background: #fee2e2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+}
+
+.footerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footerBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-gray);
+  cursor: pointer;
+}
+
+.footerBtn:hover {
+  color: var(--text-dark);
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-gray);
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  color: var(--text-gray);
+  text-align: center;
+}
+
+.emptyState img {
+  opacity: 0.5;
+  margin-bottom: 16px;
+}
+
+/* Dropdowns */
+.dropdownPop {
+  position: absolute;
+  top: calc(100% + 4px);
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  min-width: 160px;
+  z-index: 100;
+}
+
+.dropdownItem {
+  padding: 10px 16px;
+  font-size: 14px;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdownItem:hover {
+  background-color: var(--bg-gray);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.inputField {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.inputField:focus {
+  border-color: var(--primary-red);
+}
+
+.modalFooter {
+  padding: 20px 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelBtn {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+
+.modalPrimaryBtn {
+  background-color: var(--primary-red);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}

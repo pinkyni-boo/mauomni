@@ -1,0 +1,144 @@
+.container {
+  padding: 32px 24px;
+  background-color: #f9fafb;
+  min-height: calc(100vh - var(--header-height));
+  margin: -24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.titleHighlight {
+  color: #DF2E38; /* Markee Red */
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #4b5563;
+}
+
+.pricingGrid {
+  display: flex;
+  gap: 24px;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: center;
+}
+
+.pricingCard {
+  background-color: white;
+  border-radius: 16px;
+  padding: 32px;
+  width: 320px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.iconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.oldPrice {
+  font-size: 14px;
+  color: #9ca3af;
+  text-decoration: line-through;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.priceMonth {
+  font-size: 16px;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.savings {
+  font-size: 13px;
+  color: #DF2E38; /* Markee Red */
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.selectPeriod {
+  width: 100%;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: white;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #374151;
+  outline: none;
+}
+
+.buyBtn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #DF2E38; /* Markee Red */
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 24px;
+  transition: background-color 0.2s;
+}
+
+.buyBtn:hover {
+  background-color: #B91C25;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.4;
+}
+
+.checkIcon {
+  color: #DF2E38; /* Markee Red */
+  flex-shrink: 0;
+  margin-top: 2px;
+}

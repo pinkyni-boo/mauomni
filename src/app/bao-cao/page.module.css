@@ -1,0 +1,259 @@
+.container {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  background-color: #f9fafb;
+  margin: -24px;
+}
+
+.sidebar {
+  width: 240px;
+  background-color: white;
+  border-right: 1px solid #e5e7eb;
+  padding: 16px 0;
+}
+
+.sidebarItem {
+  padding: 12px 24px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sidebarItem.active {
+  color: #DF2E38;
+  background-color: #FDF0F1;
+  border-right: 3px solid #DF2E38;
+  font-weight: 500;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.filterContainer {
+  position: relative;
+}
+
+.filterBtn {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #374151;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterBtn.active {
+  border-color: #DF2E38;
+  color: #DF2E38;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  z-index: 50;
+  min-width: 250px;
+}
+
+.dateGrid {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.dateInput {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  width: 100%;
+  color: #374151;
+}
+
+.primaryBtn {
+  background-color: #DF2E38;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 6px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  float: right;
+}
+
+.searchWrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.searchInput {
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 8px 12px 8px 32px;
+  font-size: 13px;
+  width: 100%;
+  outline: none;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: #4b5563;
+  padding: 24px 0 16px 0;
+  font-size: 14px;
+}
+
+.fbHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 24px;
+}
+
+.chartContainer {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 20px 40px;
+  border-bottom: 1px solid #e5e7eb;
+  border-left: 1px solid #e5e7eb;
+  margin-bottom: 24px;
+}
+
+.barGroup {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.bar {
+  width: 32px;
+  border-radius: 4px 4px 0 0;
+  transition: height 0.3s ease;
+}
+
+.bar1 { background-color: #d946ef; }
+.bar2 { background-color: #4f46e5; }
+.bar3 { background-color: #22c55e; }
+
+.legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #4b5563;
+}
+
+.colorBox {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.statCard {
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.statIconWrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.statLabel {
+  font-size: 14px;
+  color: #4b5563;
+}

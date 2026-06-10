@@ -1,0 +1,259 @@
+.container {
+  display: flex;
+  height: calc(100vh - var(--header-height));
+  background-color: var(--bg-white);
+  margin: -24px;
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #f9fafb;
+}
+
+.header {
+  padding: 24px;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-top: 4px;
+}
+
+.primaryBtn {
+  background-color: var(--primary-red);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.primaryBtn:hover {
+  opacity: 0.9;
+}
+
+.formsContainer {
+  padding: 32px;
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+
+.formCard {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.formCard:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.formTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 4px;
+}
+
+.formStatus {
+  font-size: 12px;
+  font-weight: 600;
+  color: #16a34a;
+  background-color: #dcfce7;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.formDesc {
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.statsRow {
+  display: flex;
+  gap: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+  margin-bottom: 24px;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.statLabel {
+  font-size: 12px;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+.cardActions {
+  display: flex;
+  gap: 12px;
+}
+
+.actionBtn {
+  flex: 1;
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.actionBtn:hover {
+  background-color: var(--bg-gray);
+}
+
+.copyBtn:hover {
+  color: var(--primary-red);
+  border-color: var(--primary-red);
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modalContent {
+  background-color: var(--bg-white);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-gray);
+}
+
+.modalBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.inputField {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 14px;
+  outline: none;
+}
+
+.inputField:focus {
+  border-color: var(--primary-red);
+}
+
+.modalFooter {
+  padding: 20px 24px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.cancelBtn {
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
