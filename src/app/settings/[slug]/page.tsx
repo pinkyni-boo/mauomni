@@ -394,7 +394,7 @@ export default function SettingsPage({ params }: { params: Promise<{ slug: strin
   const { slug } = use(params);
   const title = titles[slug] || "Đang phát triển";
 
-  const pages: Record<string, JSX.Element> = {
+  const pages: Record<string, any> = {
     "profile": <ProfileSettings />,
     "general": <GeneralSettings />,
     "members": <MembersSettings />,
